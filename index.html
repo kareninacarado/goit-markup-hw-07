@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"/>
     
 </head>
-<body>
+<main>
     <!-- header part--> 
     <header class="header">
         <div class="container header-container">
@@ -45,8 +45,68 @@
             </li>
         </ul>
     </address>
+    <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="menu-icon" width="32" height="32">
+            <use href="./images/icons.svg#hamburger-open"></use>
+        </svg>
+    </button>
+    <ul class="hamburger-menu-list list">
+        <li class="hamburger-menu-item">
+            <a href="./index.html" class="hamburger-menu-link link menu-current">Studio</a>
+        </li>
+        <li class="hamburger-menu-item">
+            <a href="./portfolio.html" class="hamburger-menu-link link">Portfolio</a>
+        </li>
+        <li class="hamburger-menu-item">
+            <a href="#" class="hamburger-menu-link link">Contacts</a>
+        </li>
+    </ul>
+    <div class="hamburger-wrapper">
+        <address class="hamburger-contacts">
+            <ul class="hamburger-contacts-list list">
+                <li class="hamburger-contacts-item">
+                    <a href="tel:+110001111111" class="hamburger-contacts-link highlight link" target="_blank" rel="noopener noreferrer">+11 (000) 111-11-11</a>
+                </li>
+                <li class="hamburger-contacts-item">
+                    <a href="mailto:info@devstudio.com" target="_blank" rel="noopener noreferrer">info@devstudio.com</a>
+                </li>
+            </ul>
+        </address>
+
+        <ul class="hamburger-socials-list list">
+            <li class="hamburger-socials-item">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hamburger-socials-link link">
+                    <svg class="hamburger-socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#instagram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="hamburger-socials-item">
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="hamburger-socials-link link">
+                    <svg class="hamburger-socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#twitter"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="hamburger-socials-item">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="hamburger-socials-link link">
+                    <svg class="hamburger-socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#facebook"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="hamburger-socials-item">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hamburger-socials-link link">
+                    <svg class="hamburger-socials-icon" width="16" height="16">
+                        <use href="./images/icons.svg#linkedin"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
   </div>
  </header>
+</main>
 
         <!--section 1-->
         <section class="hero">
@@ -60,9 +120,9 @@
     <section class="section">
         <div class="container">
             <ul class="benefits-list list">
-               <li>
+               <li class="benefits-item">
                 <div class="benefits-svg-box">
-                    <svg class="benefits-svg-box_icon">
+                    <svg class="benefits-svg-box_icon" width="64" height="64">
                         <use href="./images/icons.svg#antenna"></use>
                     </svg>
                 </div>
@@ -72,9 +132,9 @@
                     </p>
                 </li>
 
-                <li>
+                <li class="benefits-item">
                     <div class="benefits-svg-box">
-                        <svg class="benefits-svg-box_icon">
+                        <svg class="benefits-svg-box_icon" width="64" height="64">
                             <use href="./images/icons.svg#clock"></use>
                         </svg>
                     </div>
@@ -84,9 +144,9 @@
                     </p>
                 </li>
 
-                <li>
+                <li class="benefits-item">
                     <div class="benefits-svg-box">
-                        <svg class="benefits-svg-box_icon">
+                        <svg class="benefits-svg-box_icon" width="64" height="64">
                             <use href="./images/icons.svg#diagram"></use>
                         </svg>
                     </div>
@@ -96,9 +156,9 @@
                     </p>
                 </li>
 
-                <li>
+                <li class="benefits-item">
                     <div class="benefits-svg-box">
-                        <svg class="benefits-svg-box_icon">
+                        <svg class="benefits-svg-box_icon" width="64" height="64">
                             <use href="./images/icons.svg#astronaut"></use>
                         </svg>
                     </div>
@@ -116,8 +176,8 @@
         <div class="container">
             <h2 class="section-title">What Are We Doing</h2>
             <ul class="what-we-do-list list">
-                <li>
-                    <img src="./images/what-we-do-1.jpg" alt="monitor" width="360" height="300">
+                <li class="what-we-do-item">
+                    <img srcset="./images/what-we-do-1.jpg 1x, ./images/what-we-do-1@2x.jpg 2x" src="./images/what-we-do-1.jpg" alt="monitor" width="360" height="300">
                 </li>
 
                 <li>
