@@ -1327,5 +1327,232 @@ img {
 }
 
 
+/* Mobile Menu Declarations */
+
+
+.hamburger-button {
+    margin-left: auto;
+    padding: 0;
+    width: 32px;
+    height: 22px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    fill: var(--navyblue);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hamburger-button:hover,
+.hamburger-button:focus {
+    fill: var(--lightslate);
+}
+.hamburger-button_icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    }
+.mobile-menu-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    padding: 80px 0 40px 40px;
+    transform: translateY(100%);
+    background: var(--white, #FFF);
+    transition: transform 250ms ease-in-out;
+}
+.container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    transition-property: All;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-container.is-open {
+    transform: translateY(0);
+    visibility: visible;
+    transition: transform 0.25s ease-out;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.mobile-menu-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+@media screen and (max-width: 380px) {
+    .mobile-menu-container {
+      visibility: hidden;
+    }
+}
+@media screen and (min-width: 768px) {
+    .mobile-menu-container {
+        display: none;
+    }
+}
+.modal-close-icon {
+    width: 8px;
+    height: 8px;
+    fill: currentColor;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-list {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.mobile-menu-link-active {
+    color: var(--ocean, #404BBF);
+}
+
+.mobile-menu-list_item {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.mobile-container-footer{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: last baseline;
+}
+.mobile-contact-container {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 40px;
+}
+
+.mobile-contact_tel {
+    color: var(--iris, #4D5AE5);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+}
+
+.mobile-contact_email {
+    color: var(--slate, #434455);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+}
+
+.mobile-social-container {
+    width: 100%;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 56px;
+    margin-top: 48px;
+}
+
+/* For Mobile view */
+@media screen and (max-width: 428px) {
+    .mobile-social-container {
+        gap: 24px;
+    }
+    .mobile-contact_tel {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mobile-contact_tel {
+        font-size: 26px;
+    }
+    .mobile-social-container {
+        gap: 24px;
+    }
+}
+/* For Tablet view */
+@media screen and (min-width: 768px) {
+    .mobile-menu-container{
+        display: none;
+    }
+    .header-container {
+        width: 768px;
+        height: 72px;
+    }
+
+    .menu {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 40px;
+        margin-left: 115px;
+        }
+
+    .container-contacts {
+        display: block;
+        flex-wrap: wrap;
+        margin-left: 121px;
+        gap: 12px;
+    }
+    .contact-links {
+        display: block;
+        margin: 16px 0;
+        padding: 0;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.48px;
+    }
+
+    .hamburger-button {
+        display: none;
+    }
+    
+}
+
+/* For Desktop view  */
+@media screen and (min-width:1158px) {
+    .header-container {
+        width: 1440px;
+        display: flex;
+        height: 72px;
+        justify-content: space-between;
+    }
+
+    .menu {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 40px;
+        margin-left: 76px;
+    }
+    .hamburger-button {
+        display: none;
+    }
+    .contact-links {
+        display: block;
+        margin: 16px 0;
+        padding: 0;
+        font-size: 16px;
+        font-weight: 400;        
+    }
+}
+
 
 
