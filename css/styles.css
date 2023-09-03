@@ -112,16 +112,27 @@ img {
     font-size: 36px;
     font-weight: 700;
     line-height: 40px;
-    letter-spacing: 0.72px;
-    text-transform: capitalize;
+    letter-spacing: 0.02em;
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 72px;
     color: var(--navyblue);
 }
 
 .section-no-top-padding {
     padding-top: 0;
 }
+
+.section.section-no-top-padding {
+    display: none;
+  
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  
+    @media screen and (min-width: 1158px) {
+      display: block;
+    }
+  }
 
 
 /* Header CSS */
@@ -407,8 +418,29 @@ img {
 
 
 .benefits-list {
-    gap: 22px;
+    gap: 72px;
     display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        column-gap: 24px;
+        row-gap: 72px;
+      }
+    
+      @media screen and (min-width: 1158px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        column-gap: 24px;
+        row-gap: 0;
+      }
 }
 
 .benefits-svg {
@@ -418,14 +450,21 @@ img {
 }
 
 .benefits-svg-box {
-    width: 264px;
-    height: 112px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
-    border-radius: 4px;
-    background: var(--cloudcolor);
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+      }
+    
+      @media screen and (min-width: 1158px) {
+        background-color: var(--cloudcolor);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 100px;
+        margin-bottom: 8px;
+      }
 }
 
 .benefits-svg-box_icon {
@@ -435,17 +474,50 @@ img {
 }
 
 .benefits-title {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 24px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0.72px;
     margin-bottom: 8px;
-    letter-spacing: 0.4px;
+  
+    @media screen and (min-width: 768px) {
+      text-align: left;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 40px;
+      letter-spacing: 0.72px;
+    }
+  
+    @media screen and (min-width: 1158px) {
+      text-align: left;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.4px;
+    }
 }
 
 .benefits-description {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.32px;
+    font-weight: 500;
+    color: var(--slatecolor);
+
+    @media screen and (min-width: 768px) {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.32px;
+      }
+    
+      @media screen and (min-width: 1158px) {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.32px;
+      }
 }
 
 /* Team Members */
@@ -454,7 +526,7 @@ img {
     background: var(--cloudcolor);
 }
 
-.team {
+.team-members {
     display: flex;
     gap: 24px;
     justify-content: center;
@@ -527,10 +599,29 @@ img {
 
 /* Customers */
 
-.customers {
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 24px;
+.customers-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 16px;
+    row-gap: 72px;
+
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 24px;
+        row-gap: 72px;
+      }
+    
+      @media screen and (min-width: 1158px) {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        column-gap: 24px;
+        row-gap: 0;
+      }
 }
 
 .customers-box {
@@ -1070,6 +1161,24 @@ img {
 
 /* Portfolio CSS */
 
+.portfolio-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 72px;
+
+    @media screen and (min-width: 768px) {
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+    
+      @media screen and (min-width: 1158px) {
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+  }
+
 /* Filters */
 .filters-container {
     display: flex;
@@ -1165,19 +1274,6 @@ img {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-card-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    align-self: stretch;
-    padding: 32px 16px;
-    border-top: 0px;
-    border-bottom: 1px solid var(--cornflower, #e7e9fc);
-    border-left: 1px solid var(--cornflower, #e7e9fc);
-    border-right: 1px solid var(--cornflower, #e7e9fc);
-    background-color: var(--white, #fff);
-  }
 
 .portfolio-item {
     background-color: var(--whitecolor);
@@ -1191,6 +1287,20 @@ img {
 .portfolio-item:hover .portfolio-cover-text {
     transform: translateY(0);
 }
+
+.portfolio-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+    padding: 32px 16px;
+    border-top: 0px;
+    border-bottom: 1px solid var(--cornflower, #e7e9fc);
+    border-left: 1px solid var(--cornflower, #e7e9fc);
+    border-right: 1px solid var(--cornflower, #e7e9fc);
+    background-color: var(--whitecolor, #fff);
+  }
 
 .portfolio-title {
     color: var(--navyblue);
@@ -1216,16 +1326,6 @@ img {
     align-items: center;
 }
 
-.portfolio-filters {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    margin-bottom: 72px;
-  }
 
-.portfolio-description {
-    padding: 32px 16px;
-    border: 1px solid var(--cornflower);
-    border-top: none;
-}
+
 
