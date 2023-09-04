@@ -55,10 +55,19 @@ img {
 }
 
 .container {
-    width: 1158px;
+    width: 428px;
     padding: 0 15px;
     margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+
+    @media screen and (min-width: 1158px) {
+        width: 1158px;
+    }
 }
+
 /* Constant Styles */
 
 .list {
@@ -97,9 +106,14 @@ img {
 }
 
 .section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
     background-color: var(--whitecolor);
+
+    @media screen and (min-width: 1158px) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
 }
 
 .section-no-top-padding {
@@ -246,12 +260,16 @@ img {
 
 .hero-title {
     color: var(--whitecolor);
-    font-size: 56px;
+    font-size: 36px;
     font-weight: 700;
     line-height: 60px;
     letter-spacing: 1.12px;
     text-align: center;
     margin-bottom: 48px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 56px;
+    }
 }
 
 .hero-section-button {
