@@ -123,6 +123,18 @@ img {
     padding-top: 0;
 }
 
+.section.section-no-top-padding {
+    display: none;
+  
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  
+    @media screen and (min-width: 1158px) {
+      display: block;
+    }
+  }
+
 
 /* Header CSS */
 
@@ -143,13 +155,27 @@ img {
 }
 
 .header-menu-list {
-    display: flex;
-    gap: 40px;
-    margin-left: 76px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        gap: 40px;
+        margin-left: 120px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+    }
+
+    @media screen and (min-width: 1158px) {
+        display: flex;
+        gap: 40px;
+        margin-left: 76px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+    }
 
 }
 
@@ -221,11 +247,22 @@ img {
 .header-contacts {
     display: flex;
     gap: 24px;
+}
+
+.header-contacts-list {
+    display: none;
+
 
     @media screen and (min-width: 768px) {
-        display: block;
-        margin-left: auto;
-        color: var(--slatecolor);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    @media screen and (min-width: 1158px) {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
     }
 }
 
@@ -448,6 +485,7 @@ img {
     margin-bottom: 8px;
     letter-spacing: 0.72px;
     text-align: center;
+    color: var(--navyblue);
 
     @media screen and (min-width: 768px) {
         font-size: 36px;
@@ -530,6 +568,7 @@ img {
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.4px;
+    color: var(--navyblue);
 }
 
 .team-position {
@@ -538,6 +577,7 @@ img {
     line-height: 24px;
     letter-spacing: 0.32px;
     margin-bottom: 8px;
+    color: var(--slatecolor);
 }
 
 .team-socials {
@@ -574,19 +614,28 @@ img {
 
 /* Customers */
 
-.customers {
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 24px;
-}
 
 .customers-list {
     display: flex;
-    gap: 30px;
+    column-gap: 16px;
+    row-gap: 72px;
     flex-wrap: wrap;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        column-gap: 24px;
+        row-gap: 72px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
     @media screen and (min-width: 1158px) {
+        display: flex;
+        column-gap: 24px;
+        row-gap: 0px;
         flex-wrap: nowrap;
+        justify-content: center;
     }
 }
 
@@ -632,12 +681,12 @@ img {
 
 /* Footer CSS */
 
-.page-footer {
+.footer {
     padding: 100px 0; 
     background-color: var(--navyblue);
 }
 
-.footer {
+.footer-text {
     display: flex;
     margin: -7px;
 }
