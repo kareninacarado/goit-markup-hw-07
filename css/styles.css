@@ -731,11 +731,17 @@ img {
 .footer-item {
     color: var(--cloudcolor);
     font-size: 16px;
-    font-style: normal;
-    margin-top: 8px;
-    font-weight: 400;
     line-height: 24px;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+
+    @media screen and (min-width: 1158px) {
+        text-align: left;
+    }
 }
 
 .footer-logo {
@@ -762,10 +768,19 @@ img {
     color: var(--cloudcolor);
 }
 
-.footer-socials {
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 16px;
+.footer-socials-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 16px;
+
+    @media screen and (min-width: 768px) {
+        justify-content: flex-start;
+    }
+
+    @media screen and (min-width: 1158px) {
+        justify-content: flex-start;
+    }
 }
 
 .footer-socials-item {
@@ -798,6 +813,15 @@ img {
     line-height: 24px;
     letter-spacing: 0.32px;
     margin-bottom: 16px;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+
+    @media screen and (min-width: 1158px) {
+        text-align: left;
+    }
 }
 
 .footer-socials-link_box {
@@ -817,17 +841,92 @@ img {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-form {
+.footer-container-form {
     height: 80px;
     flex-shrink: 0;
     margin-left: 80px;
 }
 
-.footer-form_label{
+.footer-subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+    }
+  
+    @media screen and (min-width: 1158px) {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+    }
+}
+
+.footer-subscribe-label {
     display: block;
     color: var(--whitecolor);
     font-weight: 500;
     /* margin-bottom: 16px; */
+}
+
+.footer-subscribe-text {
+    color: var(--whitecolor);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    display: block;
+    text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+
+  @media screen and (min-width: 1158px) {
+    text-align: left;
+  }
+}
+
+.footer-subscribe-input {
+    color: var(--whitecolor);
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.48px;
+    height: 40px;
+    padding: 8px 16px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid var(--whitecolor);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    margin-top: 16px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+  
+    @media screen and (min-width: 768px) {
+      width: 264px;
+    }
+  
+    @media screen and (min-width: 1158px) {
+      width: 264px;
+    }
+}
+
+.footer-subscribe-input:hover,
+.footer-subscribe-input:focus {
+    border: 1px solid var(--oceancolor);
+}
+
+.footer-subscribe-input::placeholder {
+    color: currentColor;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.48px;
 }
 
 .footer-form-input {
@@ -854,15 +953,19 @@ img {
     letter-spacing: 0.48px;
 }
 
-.footer-form-button {
+.footer-subscribe-button {
     height: 40px;
-    display: inline-flex;
+    display: flex;
     padding: 8px 24px;
     justify-content: center;
     align-items: center;
+    align-self: center;
     gap: 16px;
     margin-left: 24px;
     border: none;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.64px;
@@ -873,6 +976,14 @@ img {
     transition-property: background-color, color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 768px) {
+        align-self: flex-end;
+    }
+
+    @media screen and (min-width: 1158px) {
+        align-self: flex-end;
+    }
 }
 
 .footer-form-svgsubscribe {
