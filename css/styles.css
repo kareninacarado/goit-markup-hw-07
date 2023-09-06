@@ -751,8 +751,19 @@ img {
     font-style: normal;
     font-weight: 800;
     line-height: 21px;
-    letter-spacing: 0.54px;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+
+    @media screen and (min-width: 1158px) {
+        text-align: left;
+    }
 }
 
 .footer-logo:hover,
@@ -802,7 +813,7 @@ img {
 
 .footer-socials-link:hover,
 .footer-socials-link:focus {
-    background-color: #31d0aa;
+    background-color: var(--green);
     cursor: pointer;
 }
 
@@ -916,6 +927,7 @@ img {
     }
 }
 
+
 .footer-subscribe-input:hover,
 .footer-subscribe-input:focus {
     border: 1px solid var(--oceancolor);
@@ -924,30 +936,6 @@ img {
 .footer-subscribe-input::placeholder {
     color: currentColor;
     font-size: 12px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.48px;
-}
-
-.footer-form-input {
-    color: var(--whitecolor);
-    width: 275px;
-    height: 40px;
-    padding: 8px 16px;
-    display: flex;
-    margin-top: 16px;
-    font-size: 14px;
-    flex-shrink: 0;
-    background: var(--navyblue, #2E2F42);
-    border-radius: 4px;
-    border: 1px solid var(--whitecolor);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-}
-
-.footer-form-input::placeholder {
-    color: var(--whitecolor);
-    font-size: 12px;
-    font-style: normal;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.48px;
@@ -986,14 +974,15 @@ img {
     }
 }
 
-.footer-form-svgsubscribe {
-    width: 24px;
-    height: 24px;
-}
-
-.footer-form-button:hover {
+.footer-subscribe-button:hover {
     background-color: var(--oceancolor);
 }
+
+.footer-form-svgsubscribe {
+    fill: currentColor;
+}
+
+
 
 
 /* Modal CSS */
